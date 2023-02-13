@@ -81,6 +81,7 @@ func match(input string, slice []string, opt opt) (res []Matched) {
 		var idx int
 		if opt.mode == ModeCaseInsensitive {
 			s = strings.ToLower(s)
+			s = strings.TrimSpace(s)
 		}
 	LINE_MATCHING:
 		for _, r := range s {
